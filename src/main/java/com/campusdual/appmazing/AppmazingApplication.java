@@ -1,3 +1,5 @@
+// La aplicación se lanza desde aquí.
+
 package com.campusdual.appmazing;
 
 import org.springframework.boot.SpringApplication;
@@ -8,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AppmazingApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(AppmazingApplication.class, args);
+
 	}
 
-
 }
-

@@ -1,6 +1,18 @@
+# Variables para la conexión con la base de datos.
+
 spring:
+
     datasource:
+
         driver-class-name: org.hsqldb.jdbcDriver
-        url: jdbc:hsqldb:hsql://localhost:9013:templateDB
+        url: jdbc:hsqldb:hsql://localhost:9013/templateDB
         username: SA
         password:
+
+# Variables de la aplicación.
+
+server:
+
+    port: 30030
+
+# La base de datos se lanza con el comando mvn exec:java -Prun_database.
