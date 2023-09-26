@@ -23,21 +23,18 @@ public class Product {
     private int stock;
     @Column
     private BigDecimal price;
-
     @Column
     private boolean active;
     @Column
     private Date date_added;
 
-    // Getters y Setters
-
     public int getId() { return this.id; }
-    public void setId(int id) { this.id = id; }
     public String getName() { return this.name; }
     public boolean isActive() { return this.active; }
     public BigDecimal getPrice() { return this.price; }
     public int getStock() { return this.stock; }
     public Date getDate_added() { return this.date_added; }
+    public void setId(int id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setStock(int stock) { this.stock = stock; }
     public void setPrice(BigDecimal price) { this.price = price; }
