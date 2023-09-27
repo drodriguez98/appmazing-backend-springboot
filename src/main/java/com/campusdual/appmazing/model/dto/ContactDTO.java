@@ -1,5 +1,7 @@
 package com.campusdual.appmazing.model.dto;
 
+// Igual que la clase Contact pero sin notaciones.
+
 public class ContactDTO {
 
     private int id;

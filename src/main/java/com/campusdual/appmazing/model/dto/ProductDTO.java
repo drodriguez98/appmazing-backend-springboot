@@ -1,9 +1,9 @@
-// Modelo de entidades
-
 package com.campusdual.appmazing.model.dto;
 
 import java.math.BigDecimal;
 import java.util.Date;
+
+// Igual que la clase Product pero sin notaciones.
 
 public class ProductDTO {
 
