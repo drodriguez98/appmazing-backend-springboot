@@ -2,11 +2,15 @@ package com.campusdual.appmazing.model;
 
 import javax.persistence.*;
 
+// Entidad Contact relacionada con la tabla Contacts de la base de datos.
+
 @Entity
 
 @Table (name = "CONTACTS")
 
 public class Contact {
+
+    // Atributos de clase y tabla.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +25,8 @@ public class Contact {
     private String phone;
     @Column
     private String email;
+
+    // Getters y setters.
 
     public int getId() { return this.id; }
     public void setId(int id) { this.id = id; }

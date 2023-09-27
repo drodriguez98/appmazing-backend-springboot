@@ -6,13 +6,15 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-// Entidad Products (elemento persistente que se puede almacenar y recuperar de la base de datos). Mete los datos en la tabla Products.
+// Entidad Product relacionada con la tabla Products de la base de datos.
 
 @Entity
 
 @Table (name = "PRODUCTS")
 
 public class Product {
+
+    // Atributos de clase y tabla.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +29,8 @@ public class Product {
     private boolean active;
     @Column
     private Date date_added;
+
+    // Getters y setters.
 
     public int getId() { return this.id; }
     public String getName() { return this.name; }
