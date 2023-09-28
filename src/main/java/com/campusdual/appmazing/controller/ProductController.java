@@ -1,6 +1,7 @@
 package com.campusdual.appmazing.controller;
 
 import com.campusdual.appmazing.api.IProductService;
+import com.campusdual.appmazing.model.dto.ContactDTO;
 import com.campusdual.appmazing.model.dto.ProductDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,13 @@ public class ProductController {
     public List<ProductDTO> queryAllProducts() { return this.productService.queryAllProducts(); }
 
     @PostMapping(value = "/add")
-    public int insertProduct(ProductDTO product) { return this.productService.insertProduct(product); }
+    public int insertProduct(@RequestBody ProductDTO product) { return this.productService.insertProduct(product); }
+
+    @PostMapping(value = "/update")
+    public int updateProduct(@RequestBody ProductDTO product) { return this.productService.updateProduct(product); }
+
+    @PostMapping(value = "/delete")
+    public int deleteProduct(@RequestBody ProductDTO product) { return this.productService.deleteProduct(product); }
+
 
 }
