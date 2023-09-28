@@ -30,4 +30,7 @@ public class ProductController {
     @GetMapping(value = "/getAll")
     public List<ProductDTO> queryAllProducts() { return this.productService.queryAllProducts(); }
 
+    @PostMapping(value = "/add")
+    public int insertProduct(ProductDTO product) { return this.productService.insertProduct(product); }
+
 }

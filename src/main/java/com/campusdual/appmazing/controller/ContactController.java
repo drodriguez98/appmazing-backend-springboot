@@ -2,6 +2,7 @@ package com.campusdual.appmazing.controller;
 
 import com.campusdual.appmazing.api.IContactService;
 import com.campusdual.appmazing.model.dto.ContactDTO;
+import com.campusdual.appmazing.model.dto.ProductDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -29,5 +30,8 @@ public class ContactController {
 
     @GetMapping(value = "/getAll")
     public List<ContactDTO> queryAllContacts() { return this.contactService.queryAllContacts(); }
+
+    @PostMapping(value = "/add")
+    public int insertContact(@RequestBody ContactDTO contact) { return this.contactService.insertContact(contact); }
 
 }
