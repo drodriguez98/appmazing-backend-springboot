@@ -27,11 +27,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public List<ProductDTO> queryAllProducts() {
-
-        return ProductMapper.INSTANCE.toDTOList(productDAO.findAll());
-
-    }
+    public List<ProductDTO> queryAllProducts() { return ProductMapper.INSTANCE.toDTOList(productDAO.findAll()); }
 
     @Override
     public int insertProduct(ProductDTO productDTO) {
@@ -43,11 +39,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public int updateProduct(ProductDTO productDTO) {
-
-        return this.insertProduct(productDTO);
-
-    }
+    public int updateProduct(ProductDTO productDTO) { return this.insertProduct(productDTO); }
 
     @Override
     public int deleteProduct(ProductDTO productDTO) {

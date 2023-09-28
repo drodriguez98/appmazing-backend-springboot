@@ -27,11 +27,7 @@ public class ContactService implements IContactService {
     }
 
     @Override
-    public List<ContactDTO> queryAllContacts() {
-
-        return ContactMapper.INSTANCE.toDTOList(contactDAO.findAll());
-
-    }
+    public List<ContactDTO> queryAllContacts() { return ContactMapper.INSTANCE.toDTOList(contactDAO.findAll()); }
 
     @Override
     public int insertContact(ContactDTO contactDTO) {
@@ -43,11 +39,7 @@ public class ContactService implements IContactService {
     }
 
     @Override
-    public int updateContact(ContactDTO contactDTO) {
-
-        return this.insertContact(contactDTO);
-
-    }
+    public int updateContact(ContactDTO contactDTO) { return this.insertContact(contactDTO); }
 
     @Override
     public int deleteContact(ContactDTO contactDTO) {
