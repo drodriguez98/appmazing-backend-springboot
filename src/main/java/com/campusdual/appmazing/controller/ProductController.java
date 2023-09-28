@@ -14,7 +14,7 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    IProductService productService;
+    private IProductService productService;
 
     @GetMapping
     public String testController() { return "Product controller works!"; }

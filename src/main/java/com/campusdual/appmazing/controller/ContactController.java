@@ -14,7 +14,7 @@ import java.util.List;
 public class ContactController {
 
     @Autowired
-    IContactService contactService;
+    private IContactService contactService;
 
     @GetMapping
     public String testController() { return "Contact controller works!"; }
