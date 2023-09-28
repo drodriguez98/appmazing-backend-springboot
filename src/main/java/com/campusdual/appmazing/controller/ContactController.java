@@ -16,28 +16,18 @@ public class ContactController {
     IContactService contactService;
 
     @GetMapping
-    public String testController() {
-        return "Contact controller works!";
-    }
+    public String testController() { return "Contact controller works!"; }
 
     @PostMapping
-    public String testController(@RequestBody String name) {
-        return "Contact controller works, " + name + "!";
-    }
+    public String testController(@RequestBody String name) { return "Contact controller works, " + name + "!"; }
 
     @GetMapping(value = "/testMethod")
-    public String testControllerMethod() {
-        return "Contact controller method works!";
-    }
+    public String testControllerMethod() { return "Contact controller method works!"; }
 
     @PostMapping(value = "/get")
-    public ContactDTO queryContact(@RequestBody ContactDTO contactDTO) {
-        return this.contactService.queryContact(contactDTO);
-    }
+    public ContactDTO queryContact(@RequestBody ContactDTO contactDTO) { return this.contactService.queryContact(contactDTO); }
 
     @GetMapping(value = "/getAll")
-    public List<ContactDTO> queryAllContacts() {
-        return this.contactService.queryAllContacts();
-    }
+    public List<ContactDTO> queryAllContacts() { return this.contactService.queryAllContacts(); }
 
 }

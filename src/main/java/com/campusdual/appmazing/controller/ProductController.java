@@ -16,28 +16,18 @@ public class ProductController {
     IProductService productService;
 
     @GetMapping
-    public String testController() {
-        return "Product controller works!";
-    }
+    public String testController() { return "Product controller works!"; }
 
     @PostMapping
-    public String testController(@RequestBody String name) {
-        return "Product controller works!, " + name;
-    }
+    public String testController(@RequestBody String name) { return "Product controller works!, " + name; }
 
     @GetMapping(value = "/testMethod")
-    public String testControllerMethod() {
-        return "Product controller method works!";
-    }
+    public String testControllerMethod() { return "Product controller method works!"; }
 
     @PostMapping(value = "/get")
-    public ProductDTO queryProduct(@RequestBody ProductDTO product) {
-        return this.productService.queryProduct(product);
-    }
+    public ProductDTO queryProduct(@RequestBody ProductDTO product) { return this.productService.queryProduct(product); }
 
     @GetMapping(value = "/getAll")
-    public List<ProductDTO> queryAllProducts() {
-        return this.productService.queryAllProducts();
-    }
+    public List<ProductDTO> queryAllProducts() { return this.productService.queryAllProducts(); }
 
 }
