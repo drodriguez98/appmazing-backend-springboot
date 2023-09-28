@@ -34,7 +34,7 @@ public class ProductController {
     @PostMapping(value = "/add")
     public int insertProduct(@RequestBody ProductDTO product) { return this.productService.insertProduct(product); }
 
-    @PostMapping(value = "/update")
+    @PutMapping(value = "/update")
     public int updateProduct(@RequestBody ProductDTO product) { return this.productService.updateProduct(product); }
 
     @PostMapping(value = "/delete")
