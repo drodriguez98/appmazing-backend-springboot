@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-// Para probar este método, abrimos un navegador web y escribimos la dirección: http://localhost:30030/contact
-
 @RestController
 @RequestMapping("/categories")
 public class CategoryController {
