@@ -40,5 +40,4 @@ public class ProductController {
     @PostMapping(value = "/delete")
     public int deleteProduct(@RequestBody ProductDTO product) { return this.productService.deleteProduct(product); }
 
-
 }
