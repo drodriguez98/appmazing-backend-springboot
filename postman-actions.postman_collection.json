@@ -7,13 +7,42 @@
 	},
 	"item": [
 		{
+			"name": "Categories-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bebidas alcoholicas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/categories/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contacts-Add",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\r\n    \"name\": \"Juan\",\r\n    \"surname1\": \"Rodriguez\",\r\n    \"surname2\": \"Mendez\",\r\n    \"phone\": \"611244883\",\r\n    \"email\": \"juan.rodriguez@gmail.com\"\r\n\r\n}",
+					"raw": "{\r\n    \"name\": \"Misael\",\r\n    \"surname1\": \"Cordeiro\",\r\n    \"surname2\": \"Vinces\",\r\n    \"phone\": \"611265542\",\r\n    \"email\": \"misael.cordeiro@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -65,13 +94,42 @@
 			"response": []
 		},
 		{
+			"name": "Categories-Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/categories/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contacts-Delete",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\": 11}",
+					"raw": "{\r\n    \"id\": 14\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -123,13 +181,42 @@
 			"response": []
 		},
 		{
+			"name": "Categories-Get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/categories/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contacts-Get",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\":3}",
+					"raw": "{\r\n    \"id\": 3\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -157,7 +244,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\": 4}",
+					"raw": "{\r\n    \r\n    \"id\": 4\r\n\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -174,6 +261,38 @@
 					"path": [
 						"products",
 						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories-GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/categories/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"getAll"
 					]
 				}
 			},
@@ -239,13 +358,42 @@
 			"response": []
 		},
 		{
+			"name": "Categories-Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"name\": \"Frutas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30030/categories/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contacts-Update",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\r\n    \"id\": 10,\r\n    \"name\": \"Maria\",\r\n    \"surname1\": \"Perez\",\r\n    \"surname2\": \"Otero\",\r\n    \"phone\": \"555-876-355\",\r\n    \"email\": \"maria.perez@email.com\"\r\n\r\n}",
+					"raw": "{\r\n    \"id\": 15,\r\n    \"name\": \"Juan\",\r\n    \"surname1\": \"Martinez\",\r\n    \"surname2\": \"Mendez\",\r\n    \"phone\": \"611244883\",\r\n    \"email\": \"juan.rodriguez@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -274,7 +422,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{  \r\n\r\n    \"id\": 14,\r\n    \"name\": \"Potatos\",\r\n    \"stock\": 55,\r\n    \"price\": 4.00,\r\n    \"active\": true,\r\n    \"date_added\": \"2022-12-31T23:00:00.000+00:00\"\r\n\r\n}",
+					"raw": "{  \r\n    \"id\": 14,\r\n    \"name\": \"Potatos\",\r\n    \"stock\": 55,\r\n    \"price\": 4.00,\r\n    \"active\": true,\r\n    \"date_added\": \"2022-12-31T23:00:00.000+00:00\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
