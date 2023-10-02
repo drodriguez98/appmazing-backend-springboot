@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service("ProductService")
@@ -27,7 +28,9 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public List<ProductDTO> queryAllProducts() { return ProductMapper.INSTANCE.toDTOList(productDAO.findAll()); }
+    public List<ProductDTO> queryAllProducts() {
+        return ProductMapper.INSTANCE.toDTOList(productDAO.findAll());
+    }
 
     @Override
     public int insertProduct(ProductDTO productDTO) {
@@ -39,7 +42,9 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public int updateProduct(ProductDTO productDTO) { return this.insertProduct(productDTO); }
+    public int updateProduct(ProductDTO productDTO) {
+        return this.insertProduct(productDTO);
+    }
 
     @Override
     public int deleteProduct(ProductDTO productDTO) {
@@ -58,12 +63,22 @@ public class ProductService implements IProductService {
 
         if (productToBuy.isActive() && quantity <= productToBuy.getStock()) {
 
-            productToBuy.setStock(productToBuy.getStock()-quantity);
+            productToBuy.setStock(productToBuy.getStock() - quantity);
             this.updateProduct(productToBuy);
 
         }
 
         return productToBuy.getStock();
+
+    }
+
+    @Override
+    public BigDecimal calculateTotalPrice(ProductDTO product, int quantity) {
+
+        ProductDTO productToBuy = this.queryProduct(product);
+        BigDecimal totalPrice = productToBuy.getPrice().multiply(BigDecimal.valueOf(quantity));
+
+        return totalPrice;
 
     }
 
