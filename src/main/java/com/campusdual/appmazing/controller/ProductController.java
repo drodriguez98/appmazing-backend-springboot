@@ -1,13 +1,10 @@
 package com.campusdual.appmazing.controller;
 
 import com.campusdual.appmazing.api.IProductService;
-import com.campusdual.appmazing.model.dto.ContactDTO;
 import com.campusdual.appmazing.model.dto.ProductDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
-// Para probar este método, abrimos un navegador web y escribimos la dirección: http://localhost:30030/product
 
 @RestController
 @RequestMapping("/products")
@@ -39,5 +36,8 @@ public class ProductController {
 
     @PostMapping(value = "/delete")
     public int deleteProduct(@RequestBody ProductDTO product) { return this.productService.deleteProduct(product); }
+
+    @PutMapping(value = "/buy")
+    public int buyProduct(@RequestBody ProductDTO productDTO) { return this.productService.buyProduct(productDTO, 5); }
 
 }
