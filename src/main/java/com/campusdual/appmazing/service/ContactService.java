@@ -1,6 +1,7 @@
 package com.campusdual.appmazing.service;
 
 import com.campusdual.appmazing.api.IContactService;
+import com.campusdual.appmazing.api.IProductService;
 import com.campusdual.appmazing.model.Contact;
 import com.campusdual.appmazing.model.dao.ContactDAO;
 import com.campusdual.appmazing.model.dto.ContactDTO;
@@ -17,6 +18,9 @@ public class ContactService implements IContactService {
 
     @Autowired
     private ContactDAO contactDAO;
+
+    @Autowired
+    private IProductService productService;
 
     @Override
     public ContactDTO queryContact(ContactDTO contactDTO) {
