@@ -26,4 +26,4 @@ logging:
 # Variables de la aplicación.
 server:
     port: 30030
-# La base de datos se lanza con el comando mvn exec:java -Prun_database.
+# La base de datos se lanza con el comando mvn exec:java -Prun_database
