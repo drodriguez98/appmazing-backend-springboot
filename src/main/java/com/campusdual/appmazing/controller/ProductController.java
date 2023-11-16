@@ -37,13 +37,13 @@ public class ProductController {
     @PutMapping(value = "/update")
     public int updateProduct (@RequestBody ProductDTO product) { return this.productService.updateProduct(product); }
 
-    @PostMapping(value = "/delete")
+    @DeleteMapping(value = "/delete")
     public int deleteProduct (@RequestBody ProductDTO product) { return this.productService.deleteProduct(product); }
 
     @PutMapping(value = "/buy")
     public int buyProduct (@RequestBody ProductDTO productDTO) { return this.productService.buyProduct(productDTO, 5); }
 
-    @DeleteMapping(value = "/buyAndShowPrice")
+    @PostMapping(value = "/buyAndShowPrice")
     public BigDecimal buyAndShow (@RequestBody ProductDTO productDTO) {
 
         int quantity = 5;
