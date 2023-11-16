@@ -34,8 +34,7 @@ public class ContactController {
     @PutMapping(value = "/update")
     public int updateContact(@RequestBody ContactDTO contact) { return this.contactService.updateContact(contact); }
 
-    @PostMapping(value = "/delete")
+    @DeleteMapping(value = "/delete")
     public int deleteContact(@RequestBody ContactDTO contact) { return this.contactService.deleteContact(contact); }
-
 
 }

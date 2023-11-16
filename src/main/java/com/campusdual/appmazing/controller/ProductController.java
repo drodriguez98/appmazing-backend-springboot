@@ -43,7 +43,7 @@ public class ProductController {
     @PutMapping(value = "/buy")
     public int buyProduct (@RequestBody ProductDTO productDTO) { return this.productService.buyProduct(productDTO, 5); }
 
-    @PostMapping(value = "/buyAndShowPrice")
+    @DeleteMapping(value = "/buyAndShowPrice")
     public BigDecimal buyAndShow (@RequestBody ProductDTO productDTO) {
 
         int quantity = 5;

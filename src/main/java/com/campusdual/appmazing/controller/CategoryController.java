@@ -34,7 +34,7 @@ public class CategoryController {
     @PutMapping(value = "/update")
     public int updateCategory(@RequestBody CategoryDTO category) { return this.categoryService.updateCategory(category); }
 
-    @PostMapping(value = "/delete")
+    @DeleteMapping(value = "/delete")
     public int deleteCategory(@RequestBody CategoryDTO category) { return this.categoryService.deleteCategory(category); }
 
 }
